@@ -1,1 +1,56 @@
+.login-text{
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    margin-left: 39%;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.login-background{
+    width: 100vh;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.8;
+}
+.user-input-container{
+    margin: 0px 20px 0px 20px;
+    .user-input{
+        top: 30vh;
+        justify-content: center;
+        border: 1px solid black;
+        border-radius: 20px;
+        color: black;
+        --padding-start: 24px;
+        font-weight: 500;
+        .user-icon{
+            height: 34px;
+            width: 40px;
+        }
+    }
+}
+.user-password-container{
+    margin: 0px 20px 0px 20px;
+    .user-password{
+        top: 40vh;
+        justify-content: center;
+        border: 1px solid black;
+        border-radius: 20px;
+        color: black;
+        --padding-start: 10px;
+        font-weight: 500;
+        .password-icon{
+            height: 34px;
+            width: 40px;
+        }
+    }
+}
+.sign-up{
+    margin-top: 48vh;
+    text-align: center;
+    .button{
+        color: white;
+        --background: black;
+    }
+}
 

@@ -1,14 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <img class="login-background" src="assets/images/login-background.jpg" alt="Login page Background Image" />
+
+        <div class="user-input-container">
+
+            <ion-input name="username" formControlName="username" placeholder="Enter Input" type="text"
+                class="user-input">
+                <img class="user-icon" src="assets/icon/user.svg" alt="Login page Background Image" />
+            </ion-input>
+        </div>
+
+        <div class="user-password-container">
+            <ion-input name="password" formControlName="password" autocomplete="off" placeholder="Enter Password"
+                type="password" class="user-password">
+                <img class="password-icon" src="assets/icon/padlock.svg" alt="Login page Background Image" />
+            </ion-input>
+        </div>
+        <div class="login-text">Login</div>
+
+        <div class="sign-up">
+            <ion-button class="button" type="submit" [disabled]="loginForm.invalid">LOGIN</ion-button>
+        </div>
+    </form>
 </ion-content>
