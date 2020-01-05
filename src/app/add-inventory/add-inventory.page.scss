@@ -1,0 +1,29 @@
+.content-container{
+    --background: rgb(241,241,241);
+}
+.close-button{
+    text-align: end;
+    text-align: end;
+    width: 25px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+.form-container{
+    padding-top: 57px;
+
+}
+ion-item{
+    border: 0.5px solid;
+    border-radius: 21px;
+    margin-top: 20px;
+}
+.select-qty{
+    min-width: 160px;
+}
+.add-button{
+    bottom: 0px;
+    position: absolute;
+    text-align: center;
+    margin-left: 30%;
+}
