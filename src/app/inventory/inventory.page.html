@@ -1,13 +1,46 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Inventory Management
-      <ion-icon slot="start" name="star"></ion-icon>
+<ion-header  no-border>
+  <ion-toolbar class="header-container">
+    <ion-title class="title">Inventory Management
     </ion-title>
-
+    <ion-icon class="notification-icon" slot="end" name="notifications-outline"></ion-icon>
   </ion-toolbar>
 
 </ion-header>
 
-<ion-content>
-
+<ion-content class="content">
+    <div>
+      <ion-grid class="product-container">
+        <ion-row class="product-name">
+              Women Fashion
+          </ion-row>
+          <ion-row>
+            <ion-col size="8" class="vendor">
+              By : Flipcart shopping
+            </ion-col>
+            <ion-col size="4" class="date">
+              2020/1/12
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8" class="price">
+              Price : Rs <span class="price-number"> 12000</span>
+            </ion-col>
+            <ion-col size="4" class="status-container">
+              <ion-row>STATUS</ion-row>
+              <ion-row class="status">Approved</ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row class="button-container">
+            <ion-col size="6" class="buttons">Edit Product</ion-col>
+            <ion-col size="6" class="buttons">Delete</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    <div  class="add-inventory" (click)="openAddInventoryPage()" >
+        <img class="add-image" src="assets/icon/plus.svg"alt="">
+    </div>
 </ion-content>
+
+
+   
+ 

@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'inventory',
     loadChildren: () => import('./inventory/inventory.module').then( m => m.InventoryPageModule)
   },
+  {
+    path: 'add-inventory',
+    loadChildren: () => import('./add-inventory/add-inventory.module').then( m => m.AddInventoryPageModule)
+  }
 ];
 
 @NgModule({
