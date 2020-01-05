@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'add-inventory',
     loadChildren: () => import('./add-inventory/add-inventory.module').then( m => m.AddInventoryPageModule)
+  },
+  {
+    path: 'update-inventory',
+    loadChildren: () => import('./update-inventory/update-inventory.module').then( m => m.UpdateInventoryPageModule)
   }
 ];
 

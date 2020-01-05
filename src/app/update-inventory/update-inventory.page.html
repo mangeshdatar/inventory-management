@@ -1,0 +1,44 @@
+<ion-content class="content-container">
+    <div class="close-button" (click)="closeModal()"><img src="assets/icon/cross.png" alt=""></div>
+    <form #form="ngForm" (ngSubmit)="register(form)" class="form-container">
+      <ion-grid>
+        <ion-item class="">
+          <ion-input name="productName"  type="text" placeholder="Product Name" [(ngModel)]="product.productName" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="vendor" type="text" placeholder="Vendor" [(ngModel)]="product.vendor" required></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col size="6">
+            <ion-item class="">
+              <ion-input name="mrp" type="number" placeholder="MRP" [(ngModel)]="product.mrp" required></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item>
+              <ion-input name="batchNumber" type="text" placeholder="Batch Number" [(ngModel)]="product.batchNumber" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+              <ion-item>
+              <ion-input ngModel type="date" id="start" name="date"
+              [value]="currentDate"
+              min="2010-01-01" max="2028-12-31">
+            </ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+              <ion-item>
+                  <ion-input name="quantity" type="number" placeholder="Quantity" [(ngModel)]="product.quantity" required></ion-input>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+        <div class="add-button">
+            <ion-button class="button" type="submit" [disabled]="form.invalid" expand="block">Update</ion-button>
+          </div>
+      </ion-grid>
+    </form>
+  </ion-content>
+  

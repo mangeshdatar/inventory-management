@@ -87,3 +87,22 @@
     }
 }
 }
+
+.empty-message{
+    font-size: 20px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-top: 44%;
+    text-align: center;
+
+}
+.empty-image{
+    text-align: center;
+    padding-top: 10%;
+    animation-duration: 5s;
+    animation-name: rotateOutDownLeft;
+
+    animation-iteration-count: 1;
+    img{
+        max-width: 34%;
+    }
+}
