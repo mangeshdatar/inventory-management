@@ -8,6 +8,7 @@ import { InventoryPageRoutingModule } from './inventory-routing.module';
 
 import { InventoryPage } from './inventory.page';
 import { AddInventoryPageModule } from '../add-inventory/add-inventory.module';
+import { UpdateInventoryPageModule } from '../update-inventory/update-inventory.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { AddInventoryPageModule } from '../add-inventory/add-inventory.module';
     FormsModule,
     IonicModule,
     InventoryPageRoutingModule,
-    AddInventoryPageModule
+    AddInventoryPageModule,
+    UpdateInventoryPageModule
   ],
   declarations: [InventoryPage]
 })

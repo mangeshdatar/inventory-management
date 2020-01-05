@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { InventoryListService } from '../inventory-list.service';
+import { Inventory } from '../interface';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-add-inventory',
@@ -8,8 +11,9 @@ import { ModalController } from '@ionic/angular';
 })
 export class AddInventoryPage implements OnInit {
   currentDate: any;
-  constructor(    private modalCtrl: ModalController,
-    ) { }
+constructor( private modalCtrl: ModalController,private inventoryService:InventoryListService
+  ) {
+     }
 
   ngOnInit() {
     this.currentDate = new Date();
@@ -18,9 +22,9 @@ export class AddInventoryPage implements OnInit {
   }
   closeModal() {
     this.modalCtrl.dismiss();
-
   }
   register(form) {
-    console.log(form.value);
+    this.inventoryService.setInventory(form.value);
+    this.closeModal();
   }
 }

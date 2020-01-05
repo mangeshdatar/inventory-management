@@ -9,21 +9,22 @@
 
 <ion-content class="content">
     <div>
-      <ion-grid class="product-container">
+      <ion-grid *ngFor="let inventory of inventoryList;let i=index;" class="product-container">
         <ion-row class="product-name">
-              Women Fashion
+             {{inventory.productName}}
           </ion-row>
           <ion-row>
             <ion-col size="8" class="vendor">
-              By : Flipcart shopping
+              By :  {{inventory.vendor}}
+
             </ion-col>
             <ion-col size="4" class="date">
-              2020/1/12
+                {{inventory.date}}
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col size="8" class="price">
-              Price : Rs <span class="price-number"> 12000</span>
+              Price : Rs <span class="price-number">{{inventory.mrp}} </span>
             </ion-col>
             <ion-col size="4" class="status-container">
               <ion-row>STATUS</ion-row>
@@ -31,13 +32,19 @@
             </ion-col>
           </ion-row>
           <ion-row class="button-container">
-            <ion-col size="6" class="buttons">Edit Product</ion-col>
-            <ion-col size="6" class="buttons">Delete</ion-col>
+            <ion-col size="6" class="buttons" (click)="editProduct(i)">Edit Product</ion-col>
+            <ion-col size="6" class="buttons" (click)="removeProduct(i)">Delete</ion-col>
           </ion-row>
         </ion-grid>
       </div>
     <div  class="add-inventory" (click)="openAddInventoryPage()" >
         <img class="add-image" src="assets/icon/plus.svg"alt="">
+    </div>
+    <div *ngIf="inventoryList.length===0">
+      <div class="empty-message">You Haven't add any Inventory</div>
+      <div class="empty-image">
+        <img src="assets/images/shopping-cart-empty-side-view.png" alt="">
+      </div>
     </div>
 </ion-content>
 
